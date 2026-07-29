@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: rovc-voice
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
