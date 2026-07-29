@@ -1,0 +1,10 @@
+# Roblox scripts — not part of the OSS server/client stack
+roblox/
+
+# Node.js
+server/node_modules/
+server/package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db

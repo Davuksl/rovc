@@ -1,3 +1,0 @@
--- RovC Toolgun — source for the Toolgun tool's LocalScript
--- Inlined in SandboxInit.lua as TOOLGUN_CLIENT_SRC.
--- Keep this file in sync if you edit the embedded source.
