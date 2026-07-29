@@ -1,0 +1,3 @@
+-- RovC Spawn Menu — source for the SpawnMenu LocalScript
+-- Inlined in SandboxInit.lua as SPAWN_MENU_SRC.
+-- Keep this file in sync if you edit the embedded source.

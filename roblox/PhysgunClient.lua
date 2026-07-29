@@ -1,0 +1,3 @@
+-- RovC Physgun — source for the Physgun tool's LocalScript
+-- Inlined in SandboxInit.lua as PHYSGUN_CLIENT_SRC.
+-- Keep this file in sync if you edit the embedded source.

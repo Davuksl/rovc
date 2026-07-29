@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RovC Voice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>RovC Voice Chat</h1>
+
+    <div class="section">
+      <label for="sessionId">Session ID</label>
+      <input type="text" id="sessionId" placeholder="Paste your Roblox session code" spellcheck="false">
+    </div>
+
+    <div class="section">
+      <label for="roomId">Room ID</label>
+      <input type="text" id="roomId" placeholder="Optional – defaults to game server ID">
+    </div>
+
+    <div class="section">
+      <label for="volume">Master volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.05" value="1">
+    </div>
+
+    <div class="section">
+      <label>Status</label>
+      <div id="status" class="status offline">Not connected</div>
+    </div>
+
+    <div class="buttons">
+      <button id="connectBtn">Connect</button>
+      <button id="disconnectBtn" disabled>Disconnect</button>
+    </div>
+
+    <div id="peerList" class="peer-list"></div>
+  </div>
+
+  <script src="mesh-voice.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
