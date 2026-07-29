@@ -2,8 +2,8 @@
 roblox/
 
 # Node.js
-server/node_modules/
-server/package-lock.json
+node_modules/
+package-lock.json
 
 # OS
 .DS_Store
