@@ -1,12 +1,24 @@
 class MeshVoice {
-  constructor(serverUrl, iceServers) {
+  constructor(serverUrl, iceConfig) {
     this.serverUrl = serverUrl;
-    this.iceServers = iceServers || {
+    this.iceConfig = iceConfig || {};
+    this.iceServers = {
       iceServers: [
         { urls: 'stun:stun.l.google.com:19302' },
         { urls: 'stun:stun1.l.google.com:19302' },
       ],
     };
+
+    if (this.iceConfig.turnUrl && this.iceConfig.turnUsername && this.iceConfig.turnCredential) {
+      this.iceServers.iceServers.push({
+        urls: this.iceConfig.turnUrl,
+        username: this.iceConfig.turnUsername,
+        credential: this.iceConfig.turnCredential,
+      });
+    }
+    if (this.iceConfig.forceRelay) {
+      this.iceServers.iceTransportPolicy = 'relay';
+    }
 
     this.ws = null;
     this.sessionId = null;
