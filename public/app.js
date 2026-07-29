@@ -1,6 +1,10 @@
 (function () {
   const serverUrl = window.location.origin.replace(/^http/, 'ws');
-  const voice = new MeshVoice(serverUrl);
+  const voice = new MeshVoice(serverUrl, {
+    turnUrl: 'turn:213.21.250.29:3478',
+    turnUsername: 'rovc',
+    turnCredential: '67425267',
+  });
 
   const $ = (id) => document.getElementById(id);
   const statusEl = $('status');
